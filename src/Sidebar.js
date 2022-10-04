@@ -10,7 +10,13 @@ const Sidebar = () => {
       className={`${
         isSidebarOpen ? "sidebar-wrapper show" : "sidebar-wrapper"
       }`}
-    ></aside>
+    >
+      <div className="sidebar">
+        <button className="close-btn" onClick={closeSidebar}>
+          <FaTimes />
+        </button>
+      </div>
+    </aside>
   );
 };
 
