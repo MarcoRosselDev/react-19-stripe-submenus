@@ -8,8 +8,10 @@ const Navbar = () => {
   const displaySubmenu = (e) => {
     const page = e.target.textContext;
     const tempBtn = e.target.getBoundingClientRect();
-    console.log(tempBtn);
-    openSubmenu();
+    const center = (tempBtn.left + tempBtn.rigth) / 2;
+    const bottom = tempBtn.bottom - 3;
+
+    openSubmenu(page, { center, bottom });
   };
 
   return (
